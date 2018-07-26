@@ -4,7 +4,23 @@
             <h1 >RAPID QUIZ</h1>
         </div>
     </div>
+    <!--Only one notification icon will display. Will use class binding to determine which icon is displayed-->
     <div class="row">
+        <!--Notifications Icon-->
+        <!-- May need to include  ngFor* statement to indicate new notifications-->
+        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->        
+        <i class="material-icons">notification_important</i>
+        <i class="material-icons">notifications_active</i>        
+        <div class="col">
+            <nav>
+                <a routerLink = "/notifications" routerLinkActive="active">Notification Center</a>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <!--Create Quiz Icon-->
+        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->
+        <i class="material-icons">add_circle</i>
         <div class="col">
             <nav>
                 <a routerLink = "/createQ" routerLinkActive="active">Create Quiz</a>
@@ -12,6 +28,9 @@
         </div>
     </div>
     <div class="row">
+        <!--Take Quiz Icon-->
+        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->
+        <i class="material-icons">spellcheck</i>
         <div class="col">
             <nav>
                 <a routerLink ="/takeQ" routerLinkActive="active">Take Quiz</a>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center p-5">Notifications</h1> 
+        </div>
+    </div>
+    <hr>
+    <!--New Notifications DIV. Do we need to differentiate between new and unread in TS????-->
+    <div id="unreadNotifications" class="container">
+        <h3>New Notifications</h3>
+
+        <ul>
+          <li *ngFor="let newNotifications of notifications$">
+            <a routerLink="">{{ newNotifications.title }}</a>
+        
+            <p>{{ newNotifications.body }}</p>
+          </li>
+          <hr>
+          <li>
+            <p>This is a test notification. It is unread. It must be removed, eventually.</p>
+          </li>
+          <hr>
+          <li>
+            <p>Ideally, these will disappear as they are clicked and are 'read'.</p>
+          </li>
+          <hr>
+          <li>
+            <p>You've got mail!</p>
+          </li>
+        </ul>
+    </div>
+    <hr>
+    <!--Notifications. See DIV above for new/unread notifications-->
+    <div id="allNotifications" class="container">
+        <h3>All Notifications</h3>
+
+        <ul>
+          <li *ngFor="let notifications of notifications$">
+            <a routerLink="">{{ notifications.title }}</a>
+        
+            <p>{{ notifications.body }}</p>
+          </li>
+          <hr>
+          <li>
+            <p>This is a test notification. It has been hard-coded. It must be removed, eventually.</p>
+          </li>
+          <hr>
+          <li>
+            <p>This is another test notification. Please don't forget to remove me.</p>
+          </li>
+          <hr>
+          <li>
+            <p>Test notification!</p>
+          </li>
+        </ul>
+    </div>
+</div>>

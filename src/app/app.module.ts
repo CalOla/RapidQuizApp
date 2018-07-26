@@ -15,6 +15,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 
 //import { UserAccountComponent } from './user-account/user-account.component';
@@ -26,6 +27,7 @@ import { CreateGroupComponent } from './create-group/create-group.component';
     AppComponent,
       routingComponents,
       CreateGroupComponent,
+      NotificationsComponent,
 //      UserAccountComponent
 //    CreateQuizComponent,
 //    TakeQuizComponent
