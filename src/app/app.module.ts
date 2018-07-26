@@ -14,10 +14,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
-import { CreateGroupComponent } from './create-group/create-group.component';
-import { NotificationsComponent } from './notifications/notifications.component';
 
 
+//import { CreateGroupComponent } from './create-group/create-group.component';
+//import { NotificationsComponent } from './notifications/notifications.component';
 //import { UserAccountComponent } from './user-account/user-account.component';
 //import { CreateQuizComponent } from './create-quiz/create-quiz.component';
 //import { TakeQuizComponent } from './take-quiz/take-quiz.component';
@@ -26,8 +26,8 @@ import { NotificationsComponent } from './notifications/notifications.component'
   declarations: [
     AppComponent,
       routingComponents,
-      CreateGroupComponent,
-      NotificationsComponent,
+//      CreateGroupComponent,
+//      NotificationsComponent,
 //      UserAccountComponent
 //    CreateQuizComponent,
 //    TakeQuizComponent
