@@ -14,6 +14,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 //import { CreateGroupComponent } from './create-group/create-group.component';
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
       routingComponents,
+      SidebarComponent,
 //      CreateGroupComponent,
 //      NotificationsComponent,
 //      UserAccountComponent

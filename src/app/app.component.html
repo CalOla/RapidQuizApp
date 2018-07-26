@@ -1,87 +1,10 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h1 >RAPID QUIZ</h1>
-        </div>
-    </div>
-    <!--Only one notification icon will display. Will use class binding to determine which icon is displayed-->
-    <div class="row">
-        <!--Notifications Icon-->
-        <!-- May need to include  ngFor* statement to indicate new notifications-->
-        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->        
-        <i class="material-icons">notification_important</i>
-        <i class="material-icons">notifications_active</i>        
-        <div class="col">
-            <nav>
-                <a routerLink = "/notifications" routerLinkActive="active">Notification Center</a>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <!--Create Quiz Icon-->
-        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->
-        <i class="material-icons">add_circle</i>
-        <div class="col">
-            <nav>
-                <a routerLink = "/createQ" routerLinkActive="active">Create Quiz</a>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <!--Take Quiz Icon-->
-        <!--https://material.io/tools/icons/?icon=notifications_active&style=baseline-->
-        <i class="material-icons">spellcheck</i>
-        <div class="col">
-            <nav>
-                <a routerLink ="/takeQ" routerLinkActive="active">Take Quiz</a>
-            </nav>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <nav>
-                <a routerLink ="/userAcc" routerLinkActive="active">Create Account</a>
-            </nav>
-        </div>
-    </div>
-     <div class="row">
-        <div class="col">
-            <nav>
-                <a routerLink ="/groupPage" routerLinkActive="active">Create Group</a>
-            </nav>
-        </div>
+<div id="container">
+    
+    <app-sidebar></app-sidebar>
+    
+    <div>
+        
+        <h1 class="text-center p-5">RAPID QUIZ</h1>
+        <router-outlet></router-outlet>
     </div>
 </div>
-
-<!--
-<div class="container">
-    <div class="row">
-        <div class="col-1g-12">
-        <h1 class="text-center p-5">BOOTSRTAP</h1>
-        </div>
-    </div>
-</div>
--->
-
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col">
-     <p class="text-center p-5">2 of 2</p> 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      1 of 3
-    </div>
-    <div class="col">
-      2 of 3
-    </div>
-    <div class="col">
-      3 of 3
-    </div>
-  </div>
-</div>
--->
-
-<router-outlet></router-outlet>

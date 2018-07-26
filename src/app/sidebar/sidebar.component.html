@@ -1,0 +1,34 @@
+<nav>
+  <ul>
+    <li>
+        <a routerLink = "/notifications" routerLinkActive="active" [class.activated]="currentUrl == '/notifications'">
+            <i class="material-icons">notification_important</i>
+        </a>
+    </li>
+    <li>
+        <a routerLink="" [class.activated]="currentUrl == '/'">
+          <i class="material-icons">notifications_active</i> 
+        </a>
+      </li>
+      <li>
+      <a routerLink="/takeQ" [class.activated]="currentUrl == '/takeQ'">
+        <i class="material-icons">spellcheck</i>
+      </a>
+    </li>
+      <li>
+      <a routerLink="/createQ" [class.activated]="currentUrl == '/createQ'">
+        <i class="material-icons">add_circle_outline</i>
+      </a>
+    </li>
+      <li>
+      <a routerLink="/userAcc" [class.activated]="currentUrl == '/userAcc'">
+        <i class="material-icons">group_add</i>
+      </a>
+    </li>
+      <li>
+      <a routerLink="/groupPage" [class.activated]="currentUrl == '/groupPage'">
+        <i class="material-icons">group_work</i>
+      </a>
+    </li>
+  </ul>
+</nav>

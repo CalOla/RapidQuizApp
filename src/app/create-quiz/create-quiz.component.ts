@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 export class CreateQuizComponent implements OnInit {
 
    myForm: FormGroup;
+   numOfQuiz;
   
 
   constructor(private fb: FormBuilder) { }
@@ -18,6 +19,8 @@ export class CreateQuizComponent implements OnInit {
       quizName: '',
       description: '',
       access:'',
+	  groups:'', //get all groups check boxes to select
+	  numOfQ:this.numberOfQuiz,
       quizzes: this.fb.array([]),
     })
 
@@ -51,7 +54,7 @@ export class CreateQuizComponent implements OnInit {
     });
       
     
-
+//	 this.numberOfQuiz = numberOfQuiz + 1;
     this.quizForms.push(quiz);
 //    this.quizForms.push(options)
   }
@@ -66,6 +69,11 @@ export class CreateQuizComponent implements OnInit {
 
   deleteQuiz(i) {
     this.quizForms.removeAt(i)
+  }
+	
+  get numberOfQuiz() {
+	  
+	  return this.numOfQuiz;
   }
     
 //  deleteOption(i) {
