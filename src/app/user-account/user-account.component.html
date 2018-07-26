@@ -1,0 +1,48 @@
+<form [formGroup]="myForm">
+
+    Value: {{ myForm.value | json }}
+
+
+    <hr>
+
+    <mat-form-field>
+        <input matInput placeholder="firstname" formControlName="firstname" autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput placeholder="lastname" formControlName="lastname" autocomplete="off">
+    </mat-form-field>
+    
+    <mat-form-field>
+        <input matInput placeholder="username" formControlName="username" autocomplete="off">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+
+        <mat-hint align="end">Must have one letter, and one number</mat-hint>
+        <mat-error *ngIf="password.invalid && password.touched" class="has-text-danger">
+            That password sucks...
+        </mat-error>
+
+    </mat-form-field>
+
+
+
+    <mat-form-field>
+        <input matInput placeholder="age" [value]="0" formControlName="age">
+
+        <mat-error *ngIf="age.errors?.min && age.touched">
+            {{ age.errors.min.actual }} is young to use this app kiddo!
+        </mat-error>
+
+        <mat-error *ngIf="age.errors?.max && age.touched">
+            {{ age.errors.max.actual }} is too you old to use this app gramps!
+        </mat-error>
+
+    </mat-form-field>
+    
+    <button mat-raised-button [disabled]="myForm.invalid || loading" color="primary">Just quiz it!</button>
+
+
+</form>
