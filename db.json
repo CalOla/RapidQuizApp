@@ -1,0 +1,98 @@
+{
+  "quiz": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "tester",
+      "author": "monroe"
+    },
+    {
+      "quizName": "",
+      "description": "",
+      "access": "",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [],
+      "id": 3
+    },
+    {
+      "quizName": "Angular Quiz",
+      "description": "Test of Angular Knowledge",
+      "access": "Public",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [
+        {
+          "question": "Whats is Angular?",
+          "answer": "a",
+          "choices": null,
+          "a. ": "a framework for client side development",
+          "b. ": "an 90 degree angle",
+          "c. ": "a 45 degree angle",
+          "d. ": "the angle of the world"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "quizName": "",
+      "description": "",
+      "access": "",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [],
+      "id": 5
+    },
+    {
+      "quizName": "",
+      "description": "",
+      "access": "",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [],
+      "id": 6
+    },
+    {
+      "quizName": "",
+      "description": "",
+      "access": "",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [],
+      "id": 7
+    },
+    {
+      "quizName": "Riddle",
+      "description": "Fun riddle quiz",
+      "access": "Public",
+      "groups": "",
+      "numOfQ": null,
+      "quizzes": [
+        {
+          "question": "How many gas stations are in Tampa?",
+          "answer": "a",
+          "choices": null,
+          "a. ": "500",
+          "b. ": "50",
+          "c. ": "25",
+          "d. ": "30"
+        }
+      ],
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

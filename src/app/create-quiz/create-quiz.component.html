@@ -1,5 +1,5 @@
 <div class="container">
-    <form [formGroup]="myForm">
+    <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
         
     <div class="row">
         <div class="col">
@@ -11,9 +11,6 @@
     Value: {{ myForm.value | json }}
 
     <hr>
-    
-
-
 
     <div>
         <mat-form-field class="full">
@@ -54,11 +51,7 @@
                 <input matInput placeholder="answer" formControlName="answer">
             </mat-form-field>
 
-<!--
-            <mat-form-field class="sm">
-                 <textarea matInput placeholder="choices" formControlName="choices"></textarea> 
-            </mat-form-field>
--->
+
             <p> Multiple Choice</p>
             <mat-form-field class="sm">
                  <textarea matInput placeholder="option a:" formControlName="a. "></textarea> 
@@ -86,23 +79,14 @@
 
 
     <button mat-raised-button color="primary" (click)="addQuiz()">Add Quiz</button>
+		
+		<br>
+		<br>
+		<br>
 
-
-
+		<button mat-button color="primary" type="submit" >Submit Form</button>
+		
 </form>
     
-    </div>
 
-<!--
-                 <div formArrayName="options">
-
-                    <div *ngFor="let options of quizForms.controls; let i=index" [formGroupName]="i">
-
-                        <mat-form-field class="xx">
-                            <textarea matInput placeholder="optionsList" formControlName="optionsList"></textarea>
-                        </mat-form-field>
-                        
-                    </div>
-
-                 </div>
--->
+ </div>

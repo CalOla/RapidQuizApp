@@ -12,23 +12,10 @@
             <li *ngFor="let quiz of quiz$">
                 <a routerLink="/createQ/{{quiz.id}}"><strong>Title: </strong>{{ quiz.name }}</a>
                 <ul>
-                    <li>Description: {{ quiz.email }}</li>
-                    <li>Number of questions: <strong>{{ quiz.id }}</strong></li>
+                    <li>Description: {{ quiz.title }}</li>
+                    <li>Number of questions: <strong>{{ quiz.author }}</strong></li>
                 </ul><hr>
             </li>
         </ul>
     </div>
 </div>
-<!-- 
- <h1>Quiz</h1>
-
-
- <ul>
-    <li *ngFor="let quiz of quiz$">
-        <a routerLink="/createQ/{{quiz.id}}">{{ quiz.name }}</a>
-        <ul>
-            <li>{{ quiz.email }}</li>
-            <li> <a href="http://{{ quiz.website }}"> {{quiz.website}}</a></li>
-        </ul>
-    </li>
-</ul> -->

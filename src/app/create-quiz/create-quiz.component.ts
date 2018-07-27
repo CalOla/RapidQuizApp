@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-quiz',
@@ -9,10 +10,14 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 export class CreateQuizComponent implements OnInit {
 
    myForm: FormGroup;
-   numOfQuiz;
+   
+//	Form state
+	loading = false;
+  	success = false;
+	
   
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -23,7 +28,7 @@ export class CreateQuizComponent implements OnInit {
 	  numOfQ:this.numberOfQuiz,
       quizzes: this.fb.array([]),
     })
-
+  
       this.myForm.valueChanges.subscribe(console.log)
   }
 
@@ -44,28 +49,14 @@ export class CreateQuizComponent implements OnInit {
       'b. ': [],
       'c. ': [],
       'd. ': []
-          
-//      options : this.fb.array([
-//          this.fb.group({
-//              optionsList: []
-//          })
-//      ])
       
     });
-      
-    
-//	 this.numberOfQuiz = numberOfQuiz + 1;
+
     this.quizForms.push(quiz);
-//    this.quizForms.push(options)
+	  console.log(this.myForm.value);
   }
     
-//  addOption() {
-//
-//    const option = this.fb.group({ 
-//      option: []
-//    })
-//    this.optionForms.push(option);
-//  }
+
 
   deleteQuiz(i) {
     this.quizForms.removeAt(i)
@@ -75,9 +66,15 @@ export class CreateQuizComponent implements OnInit {
 	  
 	  return this.numOfQuiz;
   }
-    
-//  deleteOption(i) {
-//    this.optionForms.removeAt(i)
-//  }
+	
+  postQuiz() {
+	  let obs = this.http.post('http://localhost:3000/quiz', this.myForm.value).subscribe((data)=>{console.log(data)})
+  }
+	
+  async submitHandler() {
+	  this.loading = true;
+	  this.postQuiz;
+	  this.success = true;
+  }
 
 }

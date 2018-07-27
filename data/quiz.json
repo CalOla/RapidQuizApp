@@ -1,0 +1,17 @@
+[
+	{
+		"quizName": "micro services",
+		"description": "interview questions on microservices",
+		"access": "public",
+		"groups": ["group 1", "group 2", "group 3"],
+		"numOfQuiz": 10,
+		"quizzes": {
+			"question": "what is micro services?",
+			"answer": "a. ",
+			"a. ": "an architectural style that structures an application as a collection of small autonomous services",
+			"b. ": "a small service",
+			"c. ": "a big service",
+			"d. ": "a mini service"
+		}
+	}
+]
