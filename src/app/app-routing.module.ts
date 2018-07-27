@@ -7,6 +7,7 @@ import { UserAccountComponent } from './user-account/user-account.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
+import { QuizViewComponent } from './quiz-view/quiz-view.component';
 
 const routes: Routes = [
     { path: 'createQ', component: CreateQuizComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'userAcc', component: UserAccountComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'groupPage', component: CreateGroupComponent },
-    { path: 'notificationDetails/:id', component: NotificationdetailsComponent }
+    { path: 'notificationDetails/:id', component: NotificationdetailsComponent },
+	{ path: 'quizPage/:quizName', component: QuizViewComponent}
 ];
 
 @NgModule({
@@ -22,4 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [CreateQuizComponent,TakeQuizComponent,UserAccountComponent,NotificationsComponent, CreateGroupComponent, NotificationdetailsComponent]
+export const routingComponents = [CreateQuizComponent,TakeQuizComponent,UserAccountComponent,NotificationsComponent, CreateGroupComponent, NotificationdetailsComponent, QuizViewComponent]

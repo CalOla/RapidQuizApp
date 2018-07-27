@@ -17,7 +17,7 @@
           "d. ": "the angle of the world"
         }
       ],
-      "id": 4
+      "id": 1
     },
     {
       "quizName": "Riddle",
@@ -36,7 +36,7 @@
           "d. ": "30"
         }
       ],
-      "id": 8
+      "id": 2
     },
     {
       "quizName": "Java quiz",
@@ -55,7 +55,7 @@
           "d. ": "All of the above"
         }
       ],
-      "id": 9
+      "id": 3
     },
     {
       "quizName": "Stevan",
@@ -74,7 +74,7 @@
           "d. ": "who knows?"
         }
       ],
-      "id": 10
+      "id": 4
     }
   ]
 }

@@ -15,7 +15,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
+//import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
+//import { QuizViewComponent } from './quiz-view/quiz-view.component';
 
 
 //import { CreateGroupComponent } from './create-group/create-group.component';
@@ -29,7 +30,8 @@ import { NotificationdetailsComponent } from './notificationdetails/notification
     AppComponent,
       routingComponents,
       SidebarComponent,
-      NotificationdetailsComponent,
+//      NotificationdetailsComponent,
+//      QuizViewComponent,
 //      CreateGroupComponent,
 //      NotificationsComponent,
 //      UserAccountComponent
