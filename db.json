@@ -16,7 +16,7 @@
           "c": "a 45 degree angle",
           "d": "the angle of the world"
         },
-		{
+        {
           "question": "Whats is Angular?",
           "answer": "a",
           "choices": null,
@@ -58,10 +58,10 @@
           "question": "Whats is encapsulation?",
           "answer": "b",
           "choices": null,
-          "a. ": "Separating implementation from use",
-          "b. ": "data hiding",
-          "c. ": "to capture data",
-          "d. ": "All of the above"
+          "a": "Separating implementation from use",
+          "b": "data hiding",
+          "c": "to capture data",
+          "d": "All of the above"
         }
       ],
       "id": 3
@@ -77,13 +77,39 @@
           "question": "Will this work?",
           "answer": "b",
           "choices": null,
-          "a. ": "hopefully ",
-          "b. ": "yeah",
-          "c. ": "no",
-          "d. ": "who knows?"
+          "a": "hopefully ",
+          "b": "yeah",
+          "c": "no",
+          "d": "who knows?"
         }
       ],
       "id": 4
+    },
+    {
+      "quizName": "Soccer Quiz",
+      "description": "Test Knowledge of soccer",
+      "access": "Public",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "What team does Lionel Messi currently play for?",
+          "answer": "c",
+          "a": "Chelsea",
+          "b": "D.C United",
+          "c": "Barcelona",
+          "d": "Juventus"
+        },
+        {
+          "question": "Who won the FIFA 2018 World cup?",
+          "answer": "d",
+          "a": "Germany",
+          "b": "Africa",
+          "c": "U.S.A",
+          "d": "France"
+        }
+      ],
+      "id": 5
     }
   ]
 }

@@ -44,11 +44,10 @@ export class CreateQuizComponent implements OnInit {
       const quiz = this.fb.group ({ 
       question: [],
       answer: [],
-      choices: [],
-      'a. ': [],
-      'b. ': [],
-      'c. ': [],
-      'd. ': []
+      'a': [],
+      'b': [],
+      'c': [],
+      'd': []
       
     });
 
