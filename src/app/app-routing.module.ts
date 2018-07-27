@@ -6,13 +6,15 @@ import { TakeQuizComponent } from './take-quiz/take-quiz.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { CreateGroupComponent } from './create-group/create-group.component';
+import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
 
 const routes: Routes = [
     { path: 'createQ', component: CreateQuizComponent },
     { path: 'takeQ', component: TakeQuizComponent },
     { path: 'userAcc', component: UserAccountComponent },
     { path: 'notifications', component: NotificationsComponent },
-    { path: 'groupPage', component: CreateGroupComponent }
+    { path: 'groupPage', component: CreateGroupComponent },
+    { path: 'notificationDetails/:id', component: NotificationdetailsComponent }
 ];
 
 @NgModule({
@@ -20,4 +22,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [CreateQuizComponent,TakeQuizComponent,UserAccountComponent,NotificationsComponent, CreateGroupComponent]
+export const routingComponents = [CreateQuizComponent,TakeQuizComponent,UserAccountComponent,NotificationsComponent, CreateGroupComponent, NotificationdetailsComponent]

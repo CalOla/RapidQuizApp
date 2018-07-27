@@ -15,6 +15,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
 
 
 //import { CreateGroupComponent } from './create-group/create-group.component';
@@ -28,6 +29,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AppComponent,
       routingComponents,
       SidebarComponent,
+      NotificationdetailsComponent,
 //      CreateGroupComponent,
 //      NotificationsComponent,
 //      UserAccountComponent

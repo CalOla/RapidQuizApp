@@ -15,7 +15,7 @@ export class TakeQuizComponent implements OnInit {
 
   ngOnInit() {
       this.data.getQuiz().subscribe(
-      data => this.quiz$ = data
+        data => this.quiz$ = data
       );
   }
 

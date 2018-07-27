@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-notifications',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificationsComponent implements OnInit {
 
-  constructor() { }
+  quiz$: Object;
+
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getQuiz().subscribe(
+      data => this.quiz$ = data
+    );
   }
 
 }
