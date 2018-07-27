@@ -1,25 +1,6 @@
 {
   "quiz": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "tester",
-      "author": "monroe"
-    },
-    {
-      "quizName": "",
-      "description": "",
-      "access": "",
-      "groups": "",
-      "numOfQ": null,
-      "quizzes": [],
-      "id": 3
-    },
-    {
       "quizName": "Angular Quiz",
       "description": "Test of Angular Knowledge",
       "access": "Public",
@@ -37,33 +18,6 @@
         }
       ],
       "id": 4
-    },
-    {
-      "quizName": "",
-      "description": "",
-      "access": "",
-      "groups": "",
-      "numOfQ": null,
-      "quizzes": [],
-      "id": 5
-    },
-    {
-      "quizName": "",
-      "description": "",
-      "access": "",
-      "groups": "",
-      "numOfQ": null,
-      "quizzes": [],
-      "id": 6
-    },
-    {
-      "quizName": "",
-      "description": "",
-      "access": "",
-      "groups": "",
-      "numOfQ": null,
-      "quizzes": [],
-      "id": 7
     },
     {
       "quizName": "Riddle",
@@ -122,15 +76,5 @@
       ],
       "id": 10
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
