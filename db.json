@@ -83,6 +83,44 @@
         }
       ],
       "id": 8
+    },
+    {
+      "quizName": "Java quiz",
+      "description": "Test knowledge of java",
+      "access": "Private",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "Whats is encapsulation?",
+          "answer": "b",
+          "choices": null,
+          "a. ": "Separating implementation from use",
+          "b. ": "data hiding",
+          "c. ": "to capture data",
+          "d. ": "All of the above"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "quizName": "Stevan",
+      "description": "Stevan's quiz",
+      "access": "Public",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "Will this work?",
+          "answer": "b",
+          "choices": null,
+          "a. ": "hopefully ",
+          "b. ": "yeah",
+          "c. ": "no",
+          "d. ": "who knows?"
+        }
+      ],
+      "id": 10
     }
   ],
   "comments": [

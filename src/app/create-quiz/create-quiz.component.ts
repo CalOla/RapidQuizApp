@@ -25,7 +25,7 @@ export class CreateQuizComponent implements OnInit {
       description: '',
       access:'',
 	  groups:'', //get all groups check boxes to select
-	  numOfQ:this.numberOfQuiz,
+	  numOfQ:'',
       quizzes: this.fb.array([]),
     })
   
@@ -62,10 +62,6 @@ export class CreateQuizComponent implements OnInit {
     this.quizForms.removeAt(i)
   }
 	
-  get numberOfQuiz() {
-	  
-	  return this.numOfQuiz;
-  }
 	
   postQuiz() {
 	  let obs = this.http.post('http://localhost:3000/quiz', this.myForm.value).subscribe((data)=>{console.log(data)})
