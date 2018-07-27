@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'notifications', component: NotificationsComponent },
     { path: 'groupPage', component: CreateGroupComponent },
     { path: 'notificationDetails/:id', component: NotificationdetailsComponent },
-	{ path: 'quizPage/:quizName', component: QuizViewComponent}
+	{ path: 'quizPage/:id', component: QuizViewComponent}
 ];
 
 @NgModule({

@@ -19,6 +19,8 @@ export class NotificationdetailsComponent implements OnInit {
     this.data.getQuizById(this.quiz$).subscribe(
       data => this.quiz$ = data
     );
+	  
+	 console.log(this.quiz$)
   }
 
 }

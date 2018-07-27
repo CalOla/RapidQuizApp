@@ -13,7 +13,7 @@ export class DataService {
   }
 	
   getQuizView(id) {
-	  return this.http.get('http://localhost:3000/quiz/');
+	  return this.http.get('http://localhost:3000/quiz/' + 1);
 	  
   }
 	

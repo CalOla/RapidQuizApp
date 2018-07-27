@@ -11,10 +11,19 @@
           "question": "Whats is Angular?",
           "answer": "a",
           "choices": null,
-          "a. ": "a framework for client side development",
-          "b. ": "an 90 degree angle",
-          "c. ": "a 45 degree angle",
-          "d. ": "the angle of the world"
+          "a": "a framework for client side development",
+          "b": "an 90 degree angle",
+          "c": "a 45 degree angle",
+          "d": "the angle of the world"
+        },
+		{
+          "question": "Whats is Angular?",
+          "answer": "a",
+          "choices": null,
+          "a": "a framework for client side development",
+          "b": "an 90 degree angle",
+          "c": "a 45 degree angle",
+          "d": "the angle of the world"
         }
       ],
       "id": 1
@@ -30,10 +39,10 @@
           "question": "How many gas stations are in Tampa?",
           "answer": "a",
           "choices": null,
-          "a. ": "500",
-          "b. ": "50",
-          "c. ": "25",
-          "d. ": "30"
+          "a": "500",
+          "b": "50",
+          "c": "25",
+          "d": "30"
         }
       ],
       "id": 2

@@ -1,9 +1,22 @@
-<h1>{{ quiz$.id }}</h1>
+<h1>Quiz:{{ quiz$.id }}</h1>
 
 <ul>
-<!--  <li><strong>Username:</strong> {{ user$.quizName }}</li>-->
-<!--
-  <li><strong>Email:</strong> {{ user$.email }}</li>
-  <li><strong>Phone:</strong> {{ user$.phone }}</li>
--->
+  <li *ngFor="let quizlist of quiz$.quizzes">
+	  
+	  <ul>
+	  	<li>{{ quizlist.question }}</li>
+		  <ul>
+	  		<li>a. {{ quizlist.a }}</li>
+		  </ul>
+		  <ul>
+	  		<li>{{ quizlist.b }}</li>
+		  </ul>
+		  <ul>
+	  		<li>{{ quizlist.c }}</li>
+		  </ul>
+		  <ul>
+	  		<li>{{ quizlist.d }}</li>
+		  </ul>
+	  </ul>
+	</li>
 </ul>

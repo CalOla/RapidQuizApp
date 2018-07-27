@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Observable } from 'rxjs';
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -20,6 +19,8 @@ export class QuizViewComponent implements OnInit {
     this.data.getQuizView(this.quiz$).subscribe(
       data => this.quiz$ = data
     );
+	  
+	  console.log(this.quiz$);
   }
 
 }

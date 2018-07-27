@@ -10,7 +10,7 @@
         <hr>
         <ul>
             <li *ngFor="let quiz of quiz$">
-                <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a>
+                <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.id }}</a>
                 <ul>
                     <li>Description: {{ quiz.description }}</li>
                     <li>Access: <strong>{{ quiz.access }}</strong></li>
