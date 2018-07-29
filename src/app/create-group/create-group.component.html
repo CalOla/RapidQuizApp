@@ -4,17 +4,20 @@
             <h2 class="text-center p-5">Create Group</h2> 
         </div>
     </div>
-    <hr>
-    <div class="container">
-        <form [formGroup]="myForm">
-            <mat-form-field>
-                <input matInput placeholder="Name of Group" formControlName="groupName" autocomplete="off">
-            </mat-form-field>
+    <div class="text-center">
+        <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+            <hr>
+            <div>
+                <mat-form-field class="md">
+                    <input matInput placeholder="Group Name" formControlName="groupName" autocomplete="off">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <textarea matInput placeholder="Group Description" formControlName="description"></textarea>
+                </mat-form-field>
+            </div>
             <br>
-            <mat-form-field>
-                <input matInput placeholder="Group Description" formControlName="description" autocomplete="off">
-            </mat-form-field>
-
             <div formArrayName="members">
                 <div *ngFor="let member of groupForms.controls; let i=index" [formGroupName]="i">
                     <mat-form-field class="xs">
@@ -25,8 +28,10 @@
                     <br>
                 </div>
                 <br>
-                <button mat-raised-button color="primary" (click)="addMembers()">Add Member</button>
-                <button mat-raised-button color="accent" (click)="postNewGroup()">Create Group</button>
+                <button mat-raised-button color="warn" (click)="addMembers()">Add Member</button>
+                <br>
+                <br>
+                <button mat-raised-button color="primary" (click)="postNewGroup()">Create Group</button>
             </div>
         </form>
     </div>

@@ -15,6 +15,10 @@ export class DataService {
   getNotifications() {
     return this.http.get('http://localhost:3000/notifications');
   }
+
+  getNotificationById(noteId) {
+    return this.http.get('http://localhost:3000/notifications/' + noteId);
+  }
 	
   getQuizView(id) {
 	  return this.http.get('http://localhost:3000/quiz/' + id);
@@ -22,7 +26,7 @@ export class DataService {
   }
 	
   getQuizById(userId) {
-    return this.http.get('https://jsonplaceholder.typicode.com/users/'+userId)
+    return this.http.get('http://localhost:3000/quiz/'+ userId)
   }
 
 }

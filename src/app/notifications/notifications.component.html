@@ -10,7 +10,7 @@
         <hr>
         <ul>
           <li *ngFor="let notifications of notification$">
-            <a routerLink="/notificationDetails/{{notifications.id}}"><strong>{{notifications.id}}. {{ notifications.notetitle }}</strong>
+            <a routerLink="/notifications/{{notifications.id}}"><strong>{{notifications.id}}. {{ notifications.notetitle }}</strong>
               <p>Click to view notification</p>
             </a><hr>
           </li>

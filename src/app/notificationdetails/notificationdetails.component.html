@@ -1,7 +1,29 @@
-<h3>Notification: {{ quiz$.name }}</h3>
-
-<ul>
-  <li><strong>Title:</strong> {{ quiz$.username }}</li>
-  <li><strong>Body:</strong> {{ quiz$.email }}</li>
-  <li><strong>Date:</strong> {{ quiz$.phone }}</li>
-</ul>
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <h2 class="text-center p-5">Notification Details</h2> 
+      </div>
+  </div>
+  <hr>
+  <div class="container">
+    <h3>{{ notification$.notetitle }}</h3>
+    <br>
+    <div class="row">
+        <div class="col-3">
+            <strong>Title: </strong>
+        </div>
+        <div class="col-9">
+          {{ notification$.notetitle }}
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-3">
+        <strong>Message: </strong>
+      </div>
+      <div class="col-9">
+        {{ notification$.notetext }}
+      </div>
+    </div>
+  </div>
+</div>

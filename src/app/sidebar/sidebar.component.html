@@ -1,31 +1,26 @@
 <nav>
   <ul>
     <li>
-        <a routerLink = "/notifications" routerLinkActive="active" [class.activated]="currentUrl == '/notifications'">
-            <i class="material-icons">notification_important</i>
-        </a>
-    </li>
-    <li>
-        <a routerLink="/login" [class.activated]="currentUrl == '/login'">
-          <i class="material-icons">supervisor_account</i> 
-        </a>
-      </li>
-      <li>
       <a routerLink="/takeQ" [class.activated]="currentUrl == '/takeQ'">
-        <i class="material-icons">spellcheck</i>
+        <i class="material-icons">home</i>
       </a>
     </li>
-      <li>
+    <li>
+      <a routerLink = "/notifications" routerLinkActive="active" [class.activated]="currentUrl == '/notifications'">
+        <i class="material-icons">message</i>
+      </a>
+    </li>
+    <li>
       <a routerLink="/createQ" [class.activated]="currentUrl == '/createQ'">
         <i class="material-icons">add_circle_outline</i>
       </a>
     </li>
-      <li>
+    <li>
       <a routerLink="/userAcc" [class.activated]="currentUrl == '/userAcc'">
         <i class="material-icons">group_add</i>
       </a>
     </li>
-      <li>
+    <li>
       <a routerLink="/groupPage" [class.activated]="currentUrl == '/groupPage'">
         <i class="material-icons">group_work</i>
       </a>

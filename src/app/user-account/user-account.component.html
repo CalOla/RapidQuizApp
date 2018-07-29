@@ -4,42 +4,46 @@
             <h2 class="text-center p-5">Create User</h2> 
         </div>
     </div>
-    <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
-        <hr>
-        <mat-form-field>
-            <input matInput placeholder="First Name" formControlName="firstname" autocomplete="off">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput placeholder="Last Name" formControlName="lastname" autocomplete="off">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-                <input matInput placeholder="Age" [value]="0" formControlName="age">
-                <mat-hint>Must be 18 or older to register</mat-hint>
-                <mat-error *ngIf="age.errors?.min && age.touched">
-                    {{ age.errors.min.actual }} You must be 18 to register!
+    <div class="text-center">
+        <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+            <hr>
+            <mat-form-field>
+                <input matInput placeholder="First Name" formControlName="firstname" autocomplete="off">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Last Name" formControlName="lastname" autocomplete="off">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                    <input matInput placeholder="Age" [value]="0" formControlName="age">
+                    <mat-hint>Must be 18 or older to register!</mat-hint>
+                    <mat-error *ngIf="age.errors?.min && age.touched">
+                        {{ age.errors.min.actual }} You must be 18 to register!
+                    </mat-error>
+                    <mat-error *ngIf="age.errors?.max && age.touched">
+                        {{ age.errors.max.actual }} You must be the oldest person alive!
+                    </mat-error>
+            </mat-form-field> 
+            <br>
+            <br>
+            <mat-form-field>
+                <input matInput placeholder="Username" formControlName="username" autocomplete="off">
+                <mat-hint>We recommend using an email address!</mat-hint>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="Password" placeholder="Password" formControlName="password" autocomplete="new-password">
+                <mat-hint>Password must contain 1 letter and 1 number</mat-hint>
+                <mat-error *ngIf="password.invalid && password.touched" class="has-text-danger">
+                    Password must contain 1 letter and 1 number!
                 </mat-error>
-                <mat-error *ngIf="age.errors?.max && age.touched">
-                    {{ age.errors.max.actual }} You must be the oldest person alive!
-                </mat-error>
-        </mat-form-field> 
-        <br>
-        <br>
-        <mat-form-field>
-            <input matInput placeholder="Username" formControlName="username" autocomplete="off">
-            <mat-hint>We recommend using an email address!</mat-hint>
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput type="Password" placeholder="Password" formControlName="password" autocomplete="new-password">
-            <mat-hint>Password must contain 1 letter and 1 number</mat-hint>
-            <mat-error *ngIf="password.invalid && password.touched" class="has-text-danger">
-                Password must contain 1 letter and 1 number!
-            </mat-error>
-        </mat-form-field>
-        <br>
-        <br>
-        <button mat-raised-button color="primary" (click)="postNewUser()">Register</button>
-    </form>
+            </mat-form-field>
+            <br>
+            <br>
+            <button mat-raised-button color="primary" (click)="postNewUser()">Register</button>
+            <br>
+            <br>
+        </form>
+    </div>
 </div>

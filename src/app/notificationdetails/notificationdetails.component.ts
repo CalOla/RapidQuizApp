@@ -9,18 +9,18 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class NotificationdetailsComponent implements OnInit {
 
-  quiz$ : Object;
+  notification$ : Object;
 
   constructor(private route: ActivatedRoute, private data: DataService) {
-    this.route.params.subscribe( params => this.quiz$ = params.id );
+    this.route.params.subscribe( params => this.notification$ = params.id );
   }
 
   ngOnInit() {
-    this.data.getQuizById(this.quiz$).subscribe(
-      data => this.quiz$ = data
+    this.data.getNotificationById(this.notification$).subscribe(
+      data => this.notification$ = data
     );
 	  
-	 console.log(this.quiz$)
+	  console.log(this.notification$)
   }
 
 }

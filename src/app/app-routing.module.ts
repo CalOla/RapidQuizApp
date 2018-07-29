@@ -16,7 +16,7 @@ const routes: Routes = [
     { path: 'userAcc', component: UserAccountComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'groupPage', component: CreateGroupComponent },
-    { path: 'notificationDetails/:id', component: NotificationdetailsComponent },
+    { path: 'notifications/:id', component: NotificationdetailsComponent },
     { path: 'quizPage/:id', component: QuizViewComponent}
 ];
 
