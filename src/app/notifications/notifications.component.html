@@ -9,9 +9,9 @@
         <h3>Notifications</h3>
         <hr>
         <ul>
-          <li *ngFor="let notifications of quiz$">
-            <a routerLink="/notificationDetails/{{notifications.id}}"><strong>{{notifications.id}}. </strong>{{ notifications.name }}     
-              <p>Maybe Date</p>
+          <li *ngFor="let notifications of notification$">
+            <a routerLink="/notificationDetails/{{notifications.id}}"><strong>{{notifications.id}}. {{ notifications.notetitle }}</strong>
+              <p>Click to view notification</p>
             </a><hr>
           </li>
         </ul>

@@ -29,7 +29,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   declarations: [
     AppComponent,
       routingComponents,
-      SidebarComponent,
+      SidebarComponent
 //      NotificationdetailsComponent,
 //      QuizViewComponent,
 //      CreateGroupComponent,

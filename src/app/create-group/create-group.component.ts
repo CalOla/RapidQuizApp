@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-group',
@@ -10,7 +11,11 @@ export class CreateGroupComponent implements OnInit {
     
   myForm: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  //Form States
+  loading = false;
+  success = false;
+
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -19,7 +24,7 @@ export class CreateGroupComponent implements OnInit {
       members: this.fb.array([]),
     })
 
-      this.myForm.valueChanges.subscribe(console.log)
+    this.myForm.valueChanges.subscribe(console.log)
   }
     
   get groupForms(){
@@ -36,5 +41,15 @@ export class CreateGroupComponent implements OnInit {
     
  deleteMember(i) {
     this.groupForms.removeAt(i)
+  }
+
+  postNewGroup() {
+	  let obs = this.http.post('http://localhost:3000/group', this.myForm.value).subscribe((data)=>{console.log(data)})
+  }
+	
+  async submitHandler() {
+	  this.loading = true;
+	  this.postNewGroup;
+	  this.success = true;
   }
 }

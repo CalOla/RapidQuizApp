@@ -8,13 +8,13 @@ import { DataService } from '../data.service';
 })
 export class NotificationsComponent implements OnInit {
 
-  quiz$: Object;
+  notification$: Object;
 
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getQuiz().subscribe(
-      data => this.quiz$ = data
+    this.data.getNotifications().subscribe(
+      data => this.notification$ = data
     );
   }
 

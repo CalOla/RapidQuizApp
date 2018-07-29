@@ -9,14 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CreateQuizComponent implements OnInit {
 
-   myForm: FormGroup;
+  myForm: FormGroup;
    
-//	Form state
+  //Form state
 	loading = false;
-  	success = false;
+  success = false;
 	
-  
-
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
@@ -24,12 +22,12 @@ export class CreateQuizComponent implements OnInit {
       quizName: '',
       description: '',
       access:'',
-	  groups:'', //get all groups check boxes to select
-	  numOfQ:'',
+	    groups:'', //get all groups check boxes to select
+	    numOfQ:'',
       quizzes: this.fb.array([]),
     })
   
-      this.myForm.valueChanges.subscribe(console.log)
+    this.myForm.valueChanges.subscribe(console.log)
   }
 
   get quizForms() {
@@ -40,7 +38,7 @@ export class CreateQuizComponent implements OnInit {
     return this.quizForms.get('options') as FormArray
   }
 
-  addQuiz() {
+  addQuestion() {
       const quiz = this.fb.group ({ 
       question: [],
       answer: [],
@@ -48,19 +46,15 @@ export class CreateQuizComponent implements OnInit {
       'b': [],
       'c': [],
       'd': []
-      
     });
 
     this.quizForms.push(quiz);
 	  console.log(this.myForm.value);
   }
     
-
-
-  deleteQuiz(i) {
+  deleteQuestion(i) {
     this.quizForms.removeAt(i)
   }
-	
 	
   postQuiz() {
 	  let obs = this.http.post('http://localhost:3000/quiz', this.myForm.value).subscribe((data)=>{console.log(data)})

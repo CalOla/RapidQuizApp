@@ -1,4 +1,93 @@
 {
+  "notifications": [
+    {
+      "notetitle": "You've Been Invited to Join a New Group",
+      "notetext": "You have been invited to join Group: A. Would you like to join?",
+      "responserequired": true,
+      "reponse": 0,
+      "id": 1
+    },
+    {
+      "notetitle": "You've Been Removed From a Group",
+      "notetext": "You have been removed Group: B.",
+      "responserequired": false,
+      "reponse": 0,
+      "id": 2
+    },
+    {
+      "notetitle": "You've Successfully Created a New Quiz",
+      "notetext": "You successfully created Quiz: Java Basics. Thank you for contributing!",
+      "responserequired": false,
+      "reponse": 0,
+      "id": 3
+    },
+    {
+      "notetitle": "Your score report for Quiz: Java Basics",
+      "notetext": "You scored an 80% on Quiz: Java Basics. The Group: A creator has been notified.",
+      "responserequired": false,
+      "reponse": 0,
+      "id": 4
+    },
+    {
+      "notetitle": "A member of your group recently completed Quiz: Java Basics",
+      "notetext": "Member: stevanTest27 recently completed Quiz: Java Basics with a score of 80%.",
+      "responserequired": false,
+      "reponse": 0,
+      "id": 5
+    }
+  ],
+
+  "group": [
+    {
+      "groupName": "Test",
+      "description": "This is a test group",
+      "members": [
+        {
+          "username": "stevanTest28"
+        },
+        {
+          "username": "stevanTest27"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "groupName": "testies",
+      "description": "group testies",
+      "members": [
+        {
+          "username": "mike underwood"
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "username": "stevanTest28",
+      "password": "stevantest28",
+      "firstname": "stevan",
+      "lastname": "cunningham",
+      "age": 28,
+      "id": 1
+    },
+    {
+      "username": "stevanTest27",
+      "password": "stevantest27",
+      "firstname": "Stevan",
+      "lastname": "Cunningham",
+      "age": "27",
+      "id": 2
+    },
+    {
+      "username": "stevanTest27",
+      "password": "stevantest27",
+      "firstname": "Stevan",
+      "lastname": "Cunningham",
+      "age": "27",
+      "id": 3
+    }
+  ],
   "quiz": [
     {
       "quizName": "Angular Quiz",

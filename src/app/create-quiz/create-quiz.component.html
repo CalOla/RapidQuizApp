@@ -1,92 +1,68 @@
 <div class="container">
-    <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
-        
     <div class="row">
         <div class="col">
-            <h1 class="text-center p-5">Create Quiz</h1> 
+            <h2 class="text-center p-5">Create Quiz</h2> 
         </div>
     </div>
-
-
-    Value: {{ myForm.value | json }}
-
-    <hr>
-
-    <div>
-        <mat-form-field class="full">
-
-            <input matInput placeholder="quiz name" formControlName="quizName">
-
-        </mat-form-field></div>
-    
-    <div>
-        <mat-form-field>
-            <textarea matInput placeholder="description" formControlName="description"></textarea>
-        </mat-form-field>
-    </div>
-    
-    <div>
-        <mat-form-field>
-        <mat-select formControlName="access" placeholder="Access">
-            <mat-option value="Public">Public</mat-option>
-            <mat-option value="Private">Private</mat-option>
-        </mat-select>
-    </mat-form-field>
-    </div>
-
-    <div formArrayName="quizzes">
-
-        <div *ngFor="let quiz of quizForms.controls; let i=index" [formGroupName]="i">
-        
-            <div>
-
-            <p> Question </p>
-            <mat-form-field class="xs">
-                <textarea matInput placeholder="question" formControlName="question"></textarea>
+    <form [formGroup]="myForm" (ngSubmit)="submitHandler()">
+        <hr>
+        <div>
+            <mat-form-field class="full">
+                <input matInput placeholder="Quiz Name" formControlName="quizName">
             </mat-form-field>
-                
-            <p> Quiz information</p>
+        </div>
+        <div>
+            <mat-form-field>
+                <textarea matInput placeholder="Quiz Description" formControlName="description"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-select formControlName="access" placeholder="Access (Public/Private)">
+                    <mat-option value="Public">Public</mat-option>
+                    <mat-option value="Private">Private</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <br>
+        <div formArrayName="quizzes">
+            <div *ngFor="let quiz of quizForms.controls; let i=index" [formGroupName]="i">
+                <div>
+                    <p>Details</p>
+                    <mat-form-field class="xs">
+                        <textarea matInput placeholder="Question" formControlName="question"></textarea>
+                    </mat-form-field>
+                        
+                    <p>Correct Answer</p>
+                    <mat-form-field class="xs">
+                        <input matInput placeholder="Answer (A, B, C, D)" formControlName="answer">
+                    </mat-form-field>
 
-            <mat-form-field class="xs">
-                <input matInput placeholder="answer" formControlName="answer">
-            </mat-form-field>
-
-
-            <p> Multiple Choice</p>
-            <mat-form-field class="sm">
-                 <textarea matInput placeholder="option a:" formControlName="a"></textarea> 
-            </mat-form-field>
-                
-            <mat-form-field class="sm">
-                 <textarea matInput placeholder="option b: " formControlName="b"></textarea> 
-            </mat-form-field>
-                
-            <mat-form-field class="sm">
-                 <textarea matInput placeholder="option c: " formControlName="c"></textarea> 
-            </mat-form-field>
-                
-            <mat-form-field class="sm">
-                 <textarea matInput placeholder="option d: " formControlName="d"></textarea> 
-            </mat-form-field>
-
-            <button mat-raised-button color="warn" (click)="deleteQuiz(i)">Delete</button>
-                
+                    <p>Possible Answers</p>
+                    <mat-form-field class="sm">
+                        <textarea matInput placeholder="A: " formControlName="a"></textarea> 
+                    </mat-form-field>
+                        
+                    <mat-form-field class="sm">
+                        <textarea matInput placeholder="B: " formControlName="b"></textarea> 
+                    </mat-form-field>
+                        
+                    <mat-form-field class="sm">
+                        <textarea matInput placeholder="C: " formControlName="c"></textarea> 
+                    </mat-form-field>
+                        
+                    <mat-form-field class="sm">
+                        <textarea matInput placeholder="D: " formControlName="d"></textarea> 
+                    </mat-form-field><br>
+                    <br>
+                    <button mat-raised-button color="warn" (click)="deleteQuestion(i)">-</button>           
+                </div>
             </div>
-
         </div>
-
-    </div>
-
-
-    <button mat-raised-button color="primary" (click)="addQuiz()">Add Quiz</button>
-		
-		<br>
-		<br>
-		<br>
-
-		<button mat-button color="primary" (click)="postQuiz()">Submit Form</button>
-		
-</form>
-    
-
+        <br>
+        <button mat-raised-button color="primary" (click)="addQuestion()">+</button>
+            <br>
+            <br>
+        <button mat-raised-button color="primary" (click)="postQuiz()">Submit Quiz</button>
+    </form>
  </div>
