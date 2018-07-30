@@ -1,22 +1,29 @@
-<h1>Quiz:{{ quiz$.id }}</h1>
-
-<ul>
-  <li *ngFor="let quizlist of quiz$.quizzes">
-	  
-	  <ul>
-	  	<li>{{ quizlist.question }}</li>
-		  <ul>
-	  		<li><strong>a.</strong> {{ quizlist.a }}</li>
-		  </ul>
-		  <ul>
-	  		<li><strong>b. </strong>{{ quizlist.b }}</li>
-		  </ul>
-		  <ul>
-	  		<li><strong>c. </strong>{{ quizlist.c }}</li>
-		  </ul>
-		  <ul>
-	  		<li><strong>d. </strong>{{ quizlist.d }}</li>
-		  </ul>
-	  </ul>
-	</li>
-</ul>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2 class="text-center p-5">{{ quiz$.quizName }}</h2> 
+		</div>
+	</div>
+	<hr>
+	<div class="container">
+		<ul>
+			<li *ngFor="let questionList of quiz$.quizzes">		
+				<mat-radio-group>
+					{{ questionList.question }}<br><br>
+					<mat-radio-button [value]="questionList.a">
+						A. {{ questionList.a }}
+					</mat-radio-button><br>
+					<mat-radio-button [value]="questionList.b">
+						B. {{ questionList.b }}
+					</mat-radio-button><br>
+					<mat-radio-button [value]="questionList.c">
+						C. {{ questionList.c }}
+					</mat-radio-button><br>
+					<mat-radio-button [value]="questionList.d">
+						D. {{ questionList.d }}
+					</mat-radio-button><br>
+				</mat-radio-group><br>
+			</li>
+		</ul>
+	</div>
+</div>

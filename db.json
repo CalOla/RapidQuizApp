@@ -97,16 +97,7 @@
       "numOfQ": null,
       "quizzes": [
         {
-          "question": "Whats is Angular?",
-          "answer": "a",
-          "choices": null,
-          "a": "a framework for client side development",
-          "b": "an 90 degree angle",
-          "c": "a 45 degree angle",
-          "d": "the angle of the world"
-        },
-        {
-          "question": "Whats is Angular?",
+          "question": "What is Angular?",
           "answer": "a",
           "choices": null,
           "a": "a framework for client side development",

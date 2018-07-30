@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
-
+import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -15,28 +15,12 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
-//import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
-//import { QuizViewComponent } from './quiz-view/quiz-view.component';
-
-
-//import { CreateGroupComponent } from './create-group/create-group.component';
-//import { NotificationsComponent } from './notifications/notifications.component';
-//import { UserAccountComponent } from './user-account/user-account.component';
-//import { CreateQuizComponent } from './create-quiz/create-quiz.component';
-//import { TakeQuizComponent } from './take-quiz/take-quiz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-      routingComponents,
-      SidebarComponent
-//      NotificationdetailsComponent,
-//      QuizViewComponent,
-//      CreateGroupComponent,
-//      NotificationsComponent,
-//      UserAccountComponent
-//    CreateQuizComponent,
-//    TakeQuizComponent
+    routingComponents,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +31,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatRadioModule,
     MatChipsModule,
     HttpClientModule
   ],
