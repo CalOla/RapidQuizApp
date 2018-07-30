@@ -36,7 +36,6 @@
       "id": 5
     }
   ],
-
   "group": [
     {
       "groupName": "Test",
@@ -190,6 +189,60 @@
         }
       ],
       "id": 5
+    },
+    {
+      "quizName": "Grading Test Quiz",
+      "description": "Use this quiz to test the grading functionality",
+      "access": "Public",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "How many continents are there on planet Earth?",
+          "answer": "a",
+          "a": "7",
+          "b": "6",
+          "c": "8",
+          "d": "None of the above"
+        },
+        {
+          "question": "How many countries are there on Earth?",
+          "answer": "c",
+          "a": "245",
+          "b": "255",
+          "c": "243",
+          "d": "1. Murica"
+        },
+        {
+          "question": "What kind of bear is best?",
+          "answer": "d",
+          "a": "False",
+          "b": "Bears",
+          "c": "Beets",
+          "d": "Battlestar Gallactica"
+        },
+        {
+          "question": "Are we going to get fired after presenting this app?",
+          "answer": "d",
+          "a": "Yes",
+          "b": "No",
+          "c": "Probably",
+          "d": "Blame Caleb!"
+        },
+        {
+          "question": "Last question..",
+          "answer": "a",
+          "a": "Generic funny answer here",
+          "b": "Ha!",
+          "c": "Too funny.",
+          "d": "So funny I forgot to laugh."
+        }
+      ],
+      "id": 6
+    },
+    {
+      "observe": "response",
+      "id": 7
     }
   ]
 }

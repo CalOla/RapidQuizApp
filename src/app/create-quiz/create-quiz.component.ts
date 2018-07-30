@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, RendererFactory2 } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-quiz',
@@ -15,7 +16,7 @@ export class CreateQuizComponent implements OnInit {
 	loading = false;
   success = false;
 	
-  constructor(private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -57,7 +58,10 @@ export class CreateQuizComponent implements OnInit {
   }
 	
   postQuiz() {
-	  let obs = this.http.post('http://localhost:3000/quiz', this.myForm.value).subscribe((data)=>{console.log(data)})
+	  let obs = this.http.post('http://localhost:3000/quiz', {observe:'response'}).subscribe(
+      (resp) => {console.log(resp), this.router.navigate(['/takeQ']);},
+      error => console.log('There was an error creating the quiz')
+    )
   }
 	
   async submitHandler() {

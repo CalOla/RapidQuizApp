@@ -10,20 +10,21 @@
 			<li *ngFor="let questionList of quiz$.quizzes">		
 				<mat-radio-group>
 					{{ questionList.question }}<br><br>
-					<mat-radio-button [value]="questionList.a">
+					<mat-radio-button value="a">
 						A. {{ questionList.a }}
 					</mat-radio-button><br>
-					<mat-radio-button [value]="questionList.b">
+					<mat-radio-button value="b">
 						B. {{ questionList.b }}
 					</mat-radio-button><br>
-					<mat-radio-button [value]="questionList.c">
+					<mat-radio-button value="c">
 						C. {{ questionList.c }}
 					</mat-radio-button><br>
-					<mat-radio-button [value]="questionList.d">
+					<mat-radio-button value="d">
 						D. {{ questionList.d }}
 					</mat-radio-button><br>
 				</mat-radio-group><br>
 			</li>
 		</ul>
+		<button mat-raised-button color="primary" (click)="gradeQuiz()">Submit Quiz</button> 
 	</div>
 </div>
