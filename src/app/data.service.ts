@@ -16,6 +16,14 @@ export class DataService {
     return this.http.get('http://localhost:3000/notifications');
   }
 
+  getUsers() {
+    return this.http.get('http://localhost:3000/user');
+  }
+
+  getGroups() {
+    return this.http.get('http://localhost:3000/group');
+  }
+
   getNotificationById(noteId) {
     return this.http.get('http://localhost:3000/notifications/' + noteId);
   }

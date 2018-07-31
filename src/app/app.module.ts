@@ -16,13 +16,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
+import { AdminQuizViewComponent } from './admin-quiz-view/admin-quiz-view.component';
+import { RefreshComponent } from './refresh/refresh.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+    AdminQuizViewComponent,
+    RefreshComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

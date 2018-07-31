@@ -9,17 +9,23 @@ import { CreateGroupComponent } from './create-group/create-group.component';
 import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
 import { QuizViewComponent } from './quiz-view/quiz-view.component';
 import { LoginComponent } from './login/login.component';
+import { AdminQuizViewComponent } from './admin-quiz-view/admin-quiz-view.component';
+import { RefreshComponent } from './refresh/refresh.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full'},
+    { path: 'refreshComponent', component: RefreshComponent },
     { path: 'login', component: LoginComponent },
+    { path: 'adminLogin', component: AdminLoginComponent },
     { path: 'createQ', component: CreateQuizComponent },
     { path: 'takeQ', component: TakeQuizComponent },
     { path: 'userAcc', component: UserAccountComponent },
     { path: 'notifications', component: NotificationsComponent },
     { path: 'groupPage', component: CreateGroupComponent },
     { path: 'notifications/:id', component: NotificationdetailsComponent },
-    { path: 'quizPage/:id', component: QuizViewComponent}
+    { path: 'quizPage/:id', component: QuizViewComponent},
+    { path: 'adminQuizView', component: AdminQuizViewComponent }
 ];
 
 @NgModule({
@@ -35,5 +41,8 @@ export const routingComponents = [
   CreateGroupComponent, 
   NotificationdetailsComponent, 
   QuizViewComponent,
-  LoginComponent
+  LoginComponent,
+  AdminQuizViewComponent,
+  RefreshComponent,
+  AdminLoginComponent
 ]

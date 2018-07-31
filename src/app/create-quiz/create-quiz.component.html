@@ -17,14 +17,6 @@
                     <textarea matInput placeholder="Quiz Description" formControlName="description"></textarea>
                 </mat-form-field>
             </div>
-            <div>
-                <mat-form-field>
-                    <mat-select formControlName="access" placeholder="Access (Public/Private)">
-                        <mat-option value="Public">Public</mat-option>
-                        <mat-option value="Private">Private</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
             <br>
             <div formArrayName="quizzes">
                 <div *ngFor="let quiz of quizForms.controls; let i=index" [formGroupName]="i">
@@ -65,6 +57,8 @@
                 <br>
                 <br>
             <button mat-raised-button color="primary" (click)="postQuiz()">Submit Quiz</button>
+                <br>
+                <br>
         </form>
     </div>
  </div>

@@ -1,0 +1,101 @@
+<div class="container"> 
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center p-5">Administrator Catalog</h2>
+        </div>
+    </div>
+    <hr>
+    <div id="allQuizzes" class="container">
+      <h3>Quizzes</h3>
+      <hr>
+      <ul>
+        <li *ngFor="let quiz of quiz$">
+          <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a>
+          <ul>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <li>{{ quiz.description }}</li>
+                </div>
+                <div class="row">
+                  <button mat-raised-button color="warn" (click)="deleteQuiz(quiz.id)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </ul><hr>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div id="allUsers" class="container">
+        <h3>Users</h3>
+        <hr>
+        <ul>
+          <li *ngFor="let user of user$">
+            <!-- <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a> -->
+            <ul>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <li><strong>First Name: </strong> {{ user.firstname }}</li>
+                    <li><strong>Last Name: </strong>{{ user.lastname }}</li>
+                  </div>
+                  <div class="col">
+                    <li><strong>Username: </strong> {{ user.username }}</li>
+                    <li><strong>Password: </strong>{{ user.password }}</li>
+                  </div>
+                  <div class="row">
+                    <button mat-raised-button color="warn" (click)="deleteUser(user.id)">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </ul><hr>
+          </li>
+        </ul>
+    </div>
+    <hr>
+    <div id="allGroups" class="container">
+      <h3>Groups</h3>
+      <hr>
+      <ul>
+        <li *ngFor="let group of group$">
+          <!-- <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a> -->
+          <ul>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <li>{{ group.groupName }}</li>
+                  <li>{{ group.description }}</li>
+                </div>
+                <div class="row">
+                  <button mat-raised-button color="warn" (click)="deleteGroup(group.id)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </ul><hr>
+        </li>
+      </ul>
+    </div>
+    <hr>
+    <div id="allNotifications" class="container">
+      <h3>Notifications</h3>
+      <hr>
+      <ul>
+        <li *ngFor="let notification of notification$">
+          <a routerLink="notifications/{{notification.id}}"><strong>Title: </strong>{{ notification.notetitle }}</a>
+          <ul>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <li>{{ notification.notetext }}</li>
+                </div>
+                <div class="row">
+                  <button mat-raised-button color="warn" (click)="deleteNotification(notification.id)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </ul><hr>
+        </li>
+      </ul>
+    </div>
+</div>

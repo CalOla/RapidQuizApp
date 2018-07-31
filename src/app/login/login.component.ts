@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  username = "stevanTest28";
-  password = "stevantest28";
+  name = "pob190";
+  password = "abc";
 
   myForm: FormGroup;
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
-	  this.myForm = this.fb.group({
-      username: ['', [
+    this.myForm = this.fb.group({
+      name: ['', [
           Validators.required
       ]],
       password: ['', [
@@ -29,13 +29,35 @@ export class LoginComponent implements OnInit {
     })
   }
 
-/*   onSubmit() {
-		let obs = this.http.get('http://localhost:3000/user', this.myForm.value).subscribe((data)=>{console.log(data)})
-  } */
-
+  /*   onSubmit() {
+      let obs = this.http.get('http://localhost:3000/user', this.myForm.value).subscribe((data)=>{console.log(data)})
+    } */
+  /*
+    postNewUser() {
+      let obs = this.http.post('http://localhost:8081/Project2_REST_Test/api/user/login', this.myForm.value).subscribe(
+          (data)=>
+          {
+            console.log(data)
+              //this.router.navigate(['/takeQ'])
+          });
+  }
+  */
+  //http://localhost:8081/Project2_REST_Test/api/user/login
   tryLogin() {
-      console.log(this.username,
-      this.password);
+    let obs = this.http.post('http://localhost:8081/Project2_REST_Test/api/user/login', this.myForm.value).subscribe(
+      (data)=>
+      {
+        if(data === null){
+          console.log("Invalid Login")
+        }else{
+          console.log(data)
+          this.router.navigateByUrl('/userAcc');
+        }
+
+
+
+          //this.router.navigate(['/takeQ'])
+      });
   }
   
   register() {
