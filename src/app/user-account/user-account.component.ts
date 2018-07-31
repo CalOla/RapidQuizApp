@@ -67,7 +67,7 @@ export class UserAccountComponent implements OnInit {
     postNewUser() {
         let obs = this.http.post('http://localhost:3000/user', this.myForm.value).subscribe(
             (data)=>{console.log(data),
-                this.router.navigate(['/takeQ'])
+                this.router.navigate(['/login'])
             })
     }
 

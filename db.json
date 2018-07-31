@@ -8,22 +8,22 @@
       "id": 1
     },
     {
-      "notetitle": "You've Successfully Created a New Quiz",
-      "notetext": "You successfully created Quiz: Java Basics. Thank you for contributing!",
+      "notetitle": "You recently completed Quiz: Michael's Quiz with a score of 100%",
+      "notetext": "Member: pob190 recently completed Quiz: Michael's Quiz with a score of 100%.",
       "responserequired": false,
       "reponse": 0,
-      "id": 3
+      "id": 5
     },
     {
-      "notetitle": "Your score report for Quiz: Java Basics",
-      "notetext": "You scored an 80% on Quiz: Java Basics. The Group: A creator has been notified.",
+      "notetitle": "You recently completed Quiz: Michael's Quiz with a score of 50%",
+      "notetext": "Member: pob190 recently completed Quiz: Michael's Quiz with a score of 50%.",
       "responserequired": false,
       "reponse": 0,
-      "id": 4
+      "id": 5
     },
     {
-      "notetitle": "A member of your group recently completed Quiz: Java Basics",
-      "notetext": "Member: stevanTest27 recently completed Quiz: Java Basics with a score of 80%.",
+      "notetitle": "You recently completed Quiz: Michael's Quiz with a score of 0%",
+      "notetext": "Member: pob190 recently completed Quiz: Michael's Quiz with a score of 0%.",
       "responserequired": false,
       "reponse": 0,
       "id": 5
@@ -97,6 +97,14 @@
       "lastname": "Olaoye",
       "age": "24",
       "id": 3
+    },
+    {
+      "username": "stevanADMIN",
+      "password": "admin1",
+      "firstname": "Stevan",
+      "lastname": "Cunningham",
+      "age": "28",
+      "id": 4
     }
   ],
   "quiz": [
@@ -161,6 +169,50 @@
         }
       ],
       "id": 3
+    },
+    {
+      "quizName": "The Office",
+      "description": "Test Quiz",
+      "access": "",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "Which type of bear is best?",
+          "answer": "d",
+          "a": "Bears",
+          "b": "Beets",
+          "c": "Battlestar Galactica",
+          "d": "Identity theft is a crime, Jim."
+        }
+      ],
+      "id": 4
+    },
+    {
+      "quizName": "Java Basics",
+      "description": "Most basic Java questions.",
+      "access": "",
+      "groups": "",
+      "numOfQ": "",
+      "quizzes": [
+        {
+          "question": "What is Java?",
+          "answer": "b",
+          "a": "Coffee",
+          "b": "Programming Language",
+          "c": "Rich-people slang for money",
+          "d": "Just a dumb word"
+        },
+        {
+          "question": "How many Javas in a flock?",
+          "answer": "c",
+          "a": "2 or more",
+          "b": "3",
+          "c": "4",
+          "d": "5"
+        }
+      ],
+      "id": 5
     }
   ]
 }

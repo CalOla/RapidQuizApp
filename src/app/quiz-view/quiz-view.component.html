@@ -1,30 +1,25 @@
 <div class="container">
-	<div class="row">
-		<div class="col">
-			<h2 class="text-center p-5">{{ quiz$.quizName }}</h2> 
+		<div class="row">
+			<div class="col">
+				<h2 class="text-center p-5">{{ quiz$.quizName }}</h2> 
+				<h3>{{ scoreString }}</h3>
+			</div>
 		</div>
+		<hr>
+		<form [formGroup]="myForm">
+			<div formArrayName="ans">
+				<div  *ngFor="let answ of answerForms.controls; let i=index" [formGroupName]="i">
+					<p>{{i+1}}. {{quiz$.quizzes[i].question}}</p>
+					<mat-radio-group formControlName="option">
+					<mat-radio-button value="a" color="primary">{{ quiz$.quizzes[i].a }}</mat-radio-button><br>
+					<mat-radio-button value="b" color="primary">{{ quiz$.quizzes[i].b }}</mat-radio-button><br>
+					<mat-radio-button value="c" color="primary">{{ quiz$.quizzes[i].c }}</mat-radio-button><br>
+					<mat-radio-button value="d" color="primary">{{ quiz$.quizzes[i].d }}</mat-radio-button><br>
+					</mat-radio-group><br>
+				</div>
+			</div>
+			<button mat-raised-button color="primary" (click)="submitQuiz()">Submit Quiz</button>
+			<br>
+			<br>
+		</form>
 	</div>
-	<hr>
-	<div class="container">
-		<ul>
-			<li *ngFor="let questionList of quiz$.quizzes">		
-				<mat-radio-group>
-					{{ questionList.question }}<br><br>
-					<mat-radio-button value="a">
-						A. {{ questionList.a }}
-					</mat-radio-button><br>
-					<mat-radio-button value="b">
-						B. {{ questionList.b }}
-					</mat-radio-button><br>
-					<mat-radio-button value="c">
-						C. {{ questionList.c }}
-					</mat-radio-button><br>
-					<mat-radio-button value="d">
-						D. {{ questionList.d }}
-					</mat-radio-button><br>
-				</mat-radio-group><br>
-			</li>
-		</ul>
-		<button mat-raised-button color="primary" (click)="gradeQuiz()">Submit Quiz</button>
-	</div>
-</div>

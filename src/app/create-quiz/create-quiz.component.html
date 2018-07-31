@@ -21,6 +21,7 @@
             <div formArrayName="quizzes">
                 <div *ngFor="let quiz of quizForms.controls; let i=index" [formGroupName]="i">
                     <div>
+                        <br>
                         <p>Details</p>
                         <mat-form-field class="xs">
                             <textarea matInput placeholder="Question" formControlName="question"></textarea>
