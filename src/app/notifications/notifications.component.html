@@ -5,15 +5,17 @@
         </div>
     </div>
     <hr>
-    <div id="allNotifications" class="container">
-        <h3>Notifications</h3>
-        <hr>
-        <ul>
-          <li *ngFor="let notifications of notification$">
-            <a routerLink="/notifications/{{notifications.id}}"><strong>{{notifications.id}}. {{ notifications.notetitle }}</strong>
-              <p>Click to view notification</p>
-            </a><hr>
-          </li>
-        </ul>
+    <div class="text-center">
+        <div id="allNotifications" class="container">
+            <h3>Notifications</h3>
+            <hr>
+            <ul>
+            <li *ngFor="let notifications of notification$">
+                <a routerLink="/notifications/{{notifications.id}}"><strong>{{ notifications.notetitle }}</strong>
+                <p>Click to view notification</p>
+                </a><hr>
+            </li>
+            </ul>
+        </div>
     </div>
 </div>

@@ -5,17 +5,18 @@
         </div>
     </div>
     <hr>
-    <div id="allQuizzes" class="container">
-        <h3>Quizzes</h3>
-        <hr>
-        <ul>
-            <li *ngFor="let quiz of quiz$">
-                <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a>
-                <ul>
-                    <li>{{ quiz.description }}</li>
-                    <li>Access: <strong>{{ quiz.access }}</strong></li>
-                </ul><hr>
-            </li>
-        </ul>
+    <div class="text-center">
+        <div id="allQuizzes" class="container">
+            <h3>Quizzes</h3>
+            <hr>
+            <ul>
+                <li *ngFor="let quiz of quiz$">
+                    <a routerLink="/quizPage/{{quiz.id}}"><strong>Title: </strong>{{ quiz.quizName }}</a>
+                    <ul>
+                        <li>{{ quiz.description }}</li>
+                    </ul><hr>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>

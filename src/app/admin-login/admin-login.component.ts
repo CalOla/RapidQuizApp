@@ -39,6 +39,10 @@ export class AdminLoginComponent implements OnInit {
       }
     )
   }
+
+  fakeAdminLogin(){
+    this.router.navigate(['/adminQuizView']);
+  }
   
   register() {
     this.router.navigateByUrl('/userAcc');

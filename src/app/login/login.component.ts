@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
   }
   */
   //http://localhost:8081/Project2_REST_Test/api/user/login
+
   tryLogin() {
     let obs = this.http.post('http://localhost:8081/Project2_REST_Test/api/user/login', this.myForm.value).subscribe(
       (data)=>
@@ -53,11 +54,11 @@ export class LoginComponent implements OnInit {
           console.log(data)
           this.router.navigateByUrl('/userAcc');
         }
-
-
-
-          //this.router.navigate(['/takeQ'])
       });
+  }
+
+  fakeLogin(){
+    this.router.navigate(['/takeQ']);
   }
   
   register() {

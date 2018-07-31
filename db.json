@@ -31,101 +31,133 @@
   ],
   "group": [
     {
-      "groupName": "Test",
-      "description": "This is a test group",
+      "groupName": "A-Team",
+      "description": "Only the best",
       "members": [
         {
-          "username": "stevanTest28"
+          "username": "stevanc27"
         },
         {
-          "username": "stevanTest27"
+          "username": "michaelu22"
         }
       ],
       "id": 1
     },
     {
-      "groupName": "testies",
-      "description": "group testies",
+      "groupName": "B-Bay",
+      "description": "B-Town Ballers",
       "members": [
         {
-          "username": "mike underwood"
+          "username": "calebo24"
+        },
+        {
+          "username": "stevanc27"
         }
       ],
       "id": 2
+    },
+    {
+      "groupName": "SQUAD",
+      "description": "SQWAAAAAAD",
+      "members": [
+        {
+          "username": "stevanc27"
+        },
+        {
+          "username": "michaelu22"
+        },
+        {
+          "username": "calebo24"
+        }
+      ],
+      "id": 3
     }
   ],
   "user": [
     {
-      "username": "stevanTest28",
-      "password": "stevantest28",
-      "firstname": "stevan",
-      "lastname": "cunningham",
-      "age": 28,
-      "id": 1
-    },
-    {
-      "username": "stevanTest27",
-      "password": "stevantest27",
+      "username": "stevanc27",
+      "password": "stevanc27",
       "firstname": "Stevan",
       "lastname": "Cunningham",
       "age": "27",
+      "id": 1
+    },
+    {
+      "username": "michaelc22",
+      "password": "michaelc22",
+      "firstname": "Michael",
+      "lastname": "Underwood",
+      "age": "22",
       "id": 2
+    },
+    {
+      "username": "calebo24",
+      "password": "calebo24",
+      "firstname": "Caleb",
+      "lastname": "Olaoye",
+      "age": "24",
+      "id": 3
     }
   ],
   "quiz": [
     {
-      "quizName": "Angular Quiz",
-      "description": "Test of Angular Knowledge",
-      "access": "Public",
+      "quizName": "Michael's Quiz",
+      "description": "He Almost Had A Breakdown",
+      "access": "",
       "groups": "",
-      "numOfQ": null,
+      "numOfQ": "",
       "quizzes": [
         {
-          "question": "What is Angular?",
-          "answer": "a",
-          "choices": null,
-          "a": "a framework for client side development",
-          "b": "an 90 degree angle",
-          "c": "a 45 degree angle",
-          "d": "the angle of the world"
+          "question": "How many times did Michael almost pass out?",
+          "answer": "d",
+          "a": "1",
+          "b": "2",
+          "c": "15",
+          "d": "12"
+        },
+        {
+          "question": "Was it awesome?",
+          "answer": "b",
+          "a": "No",
+          "b": "Heck yeah",
+          "c": "Lol!",
+          "d": "Meh."
         }
       ],
       "id": 1
     },
     {
-      "quizName": "Riddle",
-      "description": "Fun riddle quiz",
-      "access": "Public",
+      "quizName": "Stevan's Quiz",
+      "description": "Is he really still in the course?",
+      "access": "",
       "groups": "",
-      "numOfQ": null,
+      "numOfQ": "",
       "quizzes": [
         {
-          "question": "How many gas stations are in Tampa?",
-          "answer": "a",
-          "choices": null,
-          "a": "500",
-          "b": "50",
-          "c": "25",
-          "d": "30"
+          "question": "How has he made it this far?",
+          "answer": "c",
+          "a": "He's crazy smart",
+          "b": "He rolls with the punches",
+          "c": "Pure luck",
+          "d": "He sacrificed a goat. Twice"
         }
       ],
       "id": 2
     },
     {
-      "quizName": "Java quiz",
-      "description": "Test knowledge of java",
-      "access": "Private",
+      "quizName": "Caleb's Quiz",
+      "description": "What's going on in Caleb's head?",
+      "access": "",
       "groups": "",
       "numOfQ": "",
       "quizzes": [
         {
-          "question": "Whats is encapsulation?",
-          "answer": "b",
-          "choices": null,
-          "a": "Separating implementation from use",
-          "b": "data hiding",
-          "c": "to capture data",
-          "d": "All of the above"
+          "question": "What does Caleb really think of us?",
+          "answer": "c",
+          "a": "We're cool people",
+          "b": "He doesn't trust us",
+          "c": "When is graduation?",
+          "d": "What's going on?"
         }
       ],
       "id": 3
