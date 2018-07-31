@@ -8,9 +8,11 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { CreateGroupComponent } from './create-group/create-group.component';
 import { NotificationdetailsComponent } from './notificationdetails/notificationdetails.component';
 import { QuizViewComponent } from './quiz-view/quiz-view.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-   //{ path: '', redirectTo: '/login', pathMatch: 'full'},
+    { path: '', redirectTo: '/login', pathMatch: 'full'},
+    { path: 'login', component: LoginComponent },
     { path: 'createQ', component: CreateQuizComponent },
     { path: 'takeQ', component: TakeQuizComponent },
     { path: 'userAcc', component: UserAccountComponent },
@@ -32,5 +34,6 @@ export const routingComponents = [
   NotificationsComponent, 
   CreateGroupComponent, 
   NotificationdetailsComponent, 
-  QuizViewComponent
+  QuizViewComponent,
+  LoginComponent
 ]

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <h2 class="text-center p-5">Login</h2> 
+      </div>
+  </div>
+  <div class="text-center">
+    <form [formGroup]="myForm">
+        <mat-form-field>
+          <input id="username" matInput placeholder="username" formControlName="username" autocomplete="off">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input id="password" matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-raised-button [disabled]="myForm.invalid || loading" color="primary" (click)="tryLogin()">Login</button>
+      <br>
+      <br>
+      <button mat-raised-button color="warn" (click)="register()">Register</button>
+    </form>
+  </div>
+</div>
